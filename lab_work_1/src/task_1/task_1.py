@@ -13,6 +13,7 @@ def my_multisets_intersection(a: list[int], b: list[int]) -> list[int]:
             c += [k] * counter_b[k]
     return c
 
+
 if __name__ == '__main__':
     res = f'''
 Пример работы функции (my_multisets_intersection):
