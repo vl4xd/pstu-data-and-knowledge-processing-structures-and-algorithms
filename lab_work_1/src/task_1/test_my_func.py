@@ -1,5 +1,5 @@
 import unittest
-from task_1 import my_multisets_intersection
+from my_func import my_multisets_intersection
 
 
 class TestMyMultisetsIntersection(unittest.TestCase):
