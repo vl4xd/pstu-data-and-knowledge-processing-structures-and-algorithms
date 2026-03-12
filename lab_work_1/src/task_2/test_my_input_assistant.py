@@ -1,5 +1,6 @@
 import unittest
-from utils import MyInputAssistant
+
+from my_input_assistant import MyInputAssistant
 
 
 class TestMyInputAssistant(unittest.TestCase):
