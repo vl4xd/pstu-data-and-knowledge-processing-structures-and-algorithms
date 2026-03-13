@@ -2,6 +2,15 @@ from collections import Counter
 
 
 def my_multisets_intersection(a: list[int], b: list[int]) -> list[int]:
+    """Вернуть пересечение множеств
+
+    Args:
+        a (list[int]): первое множество
+        b (list[int]): второй множество
+
+    Returns:
+        list[int]: пересечение множеств
+    """
     counter_a, counter_b = Counter(a), Counter(b)
     c: list[int] = []
     for k, v in counter_a.items():

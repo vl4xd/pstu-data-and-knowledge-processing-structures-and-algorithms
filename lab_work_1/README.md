@@ -1,1 +1,57 @@
-# pstu-data-and-knowledge-processing-structures-and-algorithms
+# Лабораторная работа №1 *(Методы работы с коллекциями и строками)*
+
+## Структура проекта:
+
+```
+/lab_work_1
+├── docs/
+├── src/
+|   ├── task_1/                         # Задание №1
+|   |   ├── my_func.py                  # реализация функции пересечений / запуск примера
+|   |   └── test_my_func.py             # тестирование
+|   ├── task_2/                         # Задание №2
+|   |   ├── main.py                     # запуск задания
+|   |   ├── my_input_assistant.py       # реализация интеллектуального помощника ввода
+|   |   └── test_my_input_assistant.py  # тестирование
+|   ├── task_3/                         # Задание №3
+|   |   ├── close_hash_table.py         # реализация хэш-таблицы с закрытой адресацией
+|   |   └── main.py                     # запуск задания
+|   └── text_examples/                  # Примеры текстов
+|       ├── lab.txt                     # текст примера задания №2
+|       └── war_and_peace.txt           # текст книги "Война и мир"
+└── README.md
+```
+
+## Запуск приложения
+
+### 1. Перейти в дирректорию `\src`:
+```bash
+cd lab_work_1/src/
+```
+### 2. Запуск задания №1:
+**Запуск примера:**
+```bash
+py task_1/my_func.py
+```
+**Запуск тестов:**
+```bash
+py py task_1/test_my_func.py
+```
+### 3. Запуск задания №2:
+**Запуск приложеня:**
+```bash
+py task_2/main.py
+```
+**Запуск тестов:**
+```bash
+py task_2/test_my_input_assistant.py
+```
+### 4. Запуск задания №3:
+**Запуск приложеня (ручной ввод):**
+```bash
+py py task_3/main.py
+```
+**Запуск приложеня (чтение файла):**
+```bash
+py task_3/main.py --file text_examples/war_and_peace.txt
+```

@@ -5,54 +5,54 @@ from my_input_assistant import MyInputAssistant
 
 class TestMyInputAssistant(unittest.TestCase):
 
-    def test_preprocessing_empty_text(self):
+    def test_text_preprocessing_empty_text(self):
         mia = MyInputAssistant()
-        self.assertEqual(mia._preprocessing(''), [])
-        self.assertEqual(mia._preprocessing(' '), [])
-        self.assertEqual(mia._preprocessing('\n'), [])
-        self.assertEqual(mia._preprocessing('\t'), [])
+        self.assertEqual(mia._text_preprocessing(''), [])
+        self.assertEqual(mia._text_preprocessing(' '), [])
+        self.assertEqual(mia._text_preprocessing('\n'), [])
+        self.assertEqual(mia._text_preprocessing('\t'), [])
 
-    def test_preprocessing_only_letters_spaces_lowercase(self):
+    def test_text_preprocessing_only_letters_spaces_lowercase(self):
         mia = MyInputAssistant()
         self.assertEqual(
-            mia._preprocessing('we study programming languages'),
+            mia._text_preprocessing('we study programming languages'),
             ['we', 'study', 'programming', 'languages']
         )
 
-    def test_preprocessing_only_letters_spaces_uppercase(self):
+    def test_text_preprocessing_only_letters_spaces_uppercase(self):
         mia = MyInputAssistant()
         self.assertEqual(
-            mia._preprocessing('WE STUDY PROGRAMMING LANGUAGES'),
+            mia._text_preprocessing('WE STUDY PROGRAMMING LANGUAGES'),
             ['we', 'study', 'programming', 'languages']
         )
 
-    def test_preprocessing_mixed_symbols_en(self):
+    def test_text_preprocessing_mixed_symbols_en(self):
             mia = MyInputAssistant()
             self.assertEqual(
-                mia._preprocessing('We study programming languages C++, C#, Go.\nWe are programmers!'),
+                mia._text_preprocessing('We study programming languages C++, C#, Go.\nWe are programmers!'),
                 ['we', 'study', 'programming', 'languages',
                  'c', 'c', 'go', 'we', 'are', 'programmers']
             )
 
-    def test_preprocessing_mixed_symbols_ru(self):
+    def test_text_preprocessing_mixed_symbols_ru(self):
         mia = MyInputAssistant()
         self.assertEqual(
-            mia._preprocessing('Я создаю свой язык программирования - РуПитон2026++.'),
+            mia._text_preprocessing('Я создаю свой язык программирования - РуПитон2026++.'),
             ['я', 'создаю', 'свой', 'язык', 'программирования', 'рупитон']
         )
 
-    def test_preprocessing_with_homoglyphs(self):
+    def test_text_preprocessing_with_homoglyphs(self):
          mia = MyInputAssistant()
          # заглавными буквами выделены латинские буквы
          self.assertEqual(
-              mia._preprocessing('я любила Eго. Oн CказAл, что не любит меня'),
+              mia._text_preprocessing('я любила Eго. Oн CказAл, что не любит меня'),
               ['я', 'любила', 'eго', 'oн', 'cказaл', 'что', 'не', 'любит', 'меня']
          )
 
-    def test_preprocessing_ignores_punctuation_and_brackets(self):
+    def test_text_preprocessing_ignores_punctuation_and_brackets(self):
         mia = MyInputAssistant()
         self.assertEqual(
-             mia._preprocessing('[Привет], "мир"! (Это) тест? - да.'),
+             mia._text_preprocessing('[Привет], "мир"! (Это) тест? - да.'),
              ["привет", "мир", "это", "тест", "да"]
         )
 
