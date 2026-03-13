@@ -35,7 +35,7 @@ py task_1/my_func.py
 ```
 **Запуск тестов:**
 ```bash
-py py task_1/test_my_func.py
+py task_1/test_my_func.py
 ```
 ### 3. Запуск задания №2:
 **Запуск приложеня:**
@@ -49,7 +49,7 @@ py task_2/test_my_input_assistant.py
 ### 4. Запуск задания №3:
 **Запуск приложеня (ручной ввод):**
 ```bash
-py py task_3/main.py
+py task_3/main.py
 ```
 **Запуск приложеня (чтение файла):**
 ```bash
