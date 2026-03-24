@@ -1,4 +1,4 @@
-from math_parser import MathParser
+from math_parser.math_parser import MathParser
 
 
 mp = MathParser('((((-4 * 20) + 3 + c))) + 174')

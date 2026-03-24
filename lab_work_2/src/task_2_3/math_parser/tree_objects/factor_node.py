@@ -3,10 +3,10 @@ from typing import TYPE_CHECKING
 
 # Для проверки типов
 if TYPE_CHECKING:
-    from tree_objects.addend_node import AddendNode
-    from tree_objects.letter_node import LetterNode
-    from tree_objects.number_node import NumberNode
-    from tree_objects.expression_node import ExpressionNode
+    from math_parser.tree_objects.addend_node import AddendNode
+    from math_parser.tree_objects.letter_node import LetterNode
+    from math_parser.tree_objects.number_node import NumberNode
+    from math_parser.tree_objects.expression_node import ExpressionNode
 
 
 class FactorNode:
@@ -21,9 +21,9 @@ class FactorNode:
 
     def construct(self):
         # Локальный импорт
-        from tree_objects.expression_node import ExpressionNode 
-        from tree_objects.letter_node import LetterNode
-        from tree_objects.number_node import NumberNode
+        from math_parser.tree_objects.expression_node import ExpressionNode 
+        from math_parser.tree_objects.letter_node import LetterNode
+        from math_parser.tree_objects.number_node import NumberNode
 
         expr = self.value.replace(' ', '')
         if not expr:

@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING
 
 # Для проверки типов
 if TYPE_CHECKING:
-    from tree_objects.factor_node import FactorNode
+    from math_parser.tree_objects.factor_node import FactorNode
 
 
 class NumberNode:

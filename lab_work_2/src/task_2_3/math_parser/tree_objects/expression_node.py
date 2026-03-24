@@ -2,12 +2,12 @@ from __future__ import annotations
 from typing import Callable
 from typing import TYPE_CHECKING
 
-from tree_objects.utils import find_last_operator, addition, subtraction
+from math_parser.tree_objects.utils import find_last_operator, addition, subtraction
 
 # Для проверки типов
 if TYPE_CHECKING:
-    from tree_objects.addend_node import AddendNode
-    from tree_objects.factor_node import FactorNode
+    from math_parser.tree_objects.addend_node import AddendNode
+    from math_parser.tree_objects.factor_node import FactorNode
 
 
 class ExpressionNode:
@@ -23,7 +23,7 @@ class ExpressionNode:
 
     def construct(self) -> dict[str, float]:
         # Локальный импорт
-        from tree_objects.addend_node import AddendNode
+        from math_parser.tree_objects.addend_node import AddendNode
 
         expr = self.value.replace(' ', '').lower()
         if not expr:
@@ -75,8 +75,8 @@ class ExpressionNode:
     
     def _collect_variables(self, vars_dict: dict[str, float]):
         # Локальный импорт
-        from tree_objects.expression_node import ExpressionNode
-        from tree_objects.addend_node import AddendNode
+        from math_parser.tree_objects.expression_node import ExpressionNode
+        from math_parser.tree_objects.addend_node import AddendNode
 
         """Рекурсивно собирает имена переменных в словарь (значения пока None)."""
         if isinstance(self.left_node, (ExpressionNode, AddendNode)):

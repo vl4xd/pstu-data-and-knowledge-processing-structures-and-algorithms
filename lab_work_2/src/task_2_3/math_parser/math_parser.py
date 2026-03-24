@@ -1,4 +1,4 @@
-from tree_objects.expression_node import ExpressionNode
+from math_parser.tree_objects.expression_node import ExpressionNode
 
 class MathParser:
 
@@ -30,6 +30,8 @@ class MathParser:
         if missing:
             raise ValueError(f"Missing values for variables: {', '.join(missing)}")
         # Вычисляем
+        if self.is_calculated:
+            return self.root.result
         result = self.root.calculate(self.variables)
         self.is_calculated = True
         return result
