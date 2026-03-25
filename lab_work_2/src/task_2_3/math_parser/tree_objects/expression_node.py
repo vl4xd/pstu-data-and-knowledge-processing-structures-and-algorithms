@@ -27,7 +27,7 @@ class ExpressionNode:
 
         expr = self.value.replace(' ', '').lower()
         if not expr:
-            return {}
+            raise ValueError("Empty expression") 
         pos = find_last_operator(expr, '+-')
         if pos != -1:
             op = expr[pos]

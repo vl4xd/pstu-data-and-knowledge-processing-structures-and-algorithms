@@ -1,5 +1,6 @@
 from math_parser.tree_objects.expression_node import ExpressionNode
 
+
 class MathParser:
 
     def __init__(self, value: str):
@@ -34,6 +35,4 @@ class MathParser:
             return self.root.result
         result = self.root.calculate(self.variables)
         self.is_calculated = True
-        return result
-
-    
+        return result 
