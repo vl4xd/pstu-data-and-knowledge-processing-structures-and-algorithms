@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mir-2/ontologies/2026/3/programming-languages"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mir-2/ontologies/2026/3/programming-languages">
+    <Prefix name="" IRI="http://www.semanticweb.org/mir-2/ontologies/2026/3/programming-languages/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Отнология по языкам программирования
+Работу выполнил Платонов В.А.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ApplicationDomain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompiledLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataScience"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Declarative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DesktopDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DynamicTyping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExecutionModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Functional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Imperative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterpretedLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JITCompiledLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LanguageComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MobileDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultiParadigm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObjectOriented"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paradigm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Procedural"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProgrammingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrototypeBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Python"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Runtime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semantics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StandardLibrary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StaticTyping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrongTyping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Syntax"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SystemProgramming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TranspiledLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TypeSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeakTyping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WebDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_domain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_execution_model"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_paradigm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_type_system"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#instance_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ApplicationDomain"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassBased"/>
+        <Class IRI="#ObjectOriented"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassBased"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ObjectOriented"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompiledLanguage"/>
+        <Class IRI="#ExecutionModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompiledLanguage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ExecutionModel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataScience"/>
+        <Class IRI="#ApplicationDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataScience"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ApplicationDomain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Declarative"/>
+        <Class IRI="#Paradigm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Declarative"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Paradigm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesktopDevelopment"/>
+        <Class IRI="#ApplicationDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DesktopDevelopment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ApplicationDomain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DynamicTyping"/>
+        <Class IRI="#TypeSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DynamicTyping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#TypeSystem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExecutionModel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Functional"/>
+        <Class IRI="#Declarative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Functional"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Declarative"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameDevelopment"/>
+        <Class IRI="#ApplicationDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameDevelopment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ApplicationDomain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imperative"/>
+        <Class IRI="#Paradigm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imperative"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Paradigm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterpretedLanguage"/>
+        <Class IRI="#ExecutionModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InterpretedLanguage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ExecutionModel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JITCompiledLanguage"/>
+        <Class IRI="#ExecutionModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JITCompiledLanguage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ExecutionModel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LanguageComponent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logic"/>
+        <Class IRI="#Declarative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logic"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Declarative"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MobileDevelopment"/>
+        <Class IRI="#ApplicationDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MobileDevelopment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ApplicationDomain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultiParadigm"/>
+        <Class IRI="#Paradigm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultiParadigm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Paradigm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectOriented"/>
+        <Class IRI="#Imperative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectOriented"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Imperative"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paradigm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procedural"/>
+        <Class IRI="#Imperative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procedural"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#Imperative"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrototypeBased"/>
+        <Class IRI="#ObjectOriented"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrototypeBased"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ObjectOriented"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <Class IRI="#ProgrammingLanguage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_domain"/>
+            <Class IRI="#DataScience"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_domain"/>
+            <Class IRI="#DesktopDevelopment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_domain"/>
+            <Class IRI="#WebDevelopment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_execution_model"/>
+            <Class IRI="#InterpretedLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_paradigm"/>
+            <Class IRI="#ClassBased"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_paradigm"/>
+            <Class IRI="#Functional"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_paradigm"/>
+            <Class IRI="#MultiParadigm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_paradigm"/>
+            <Class IRI="#Procedural"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_type_system"/>
+            <Class IRI="#DynamicTyping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_type_system"/>
+            <Class IRI="#StrongTyping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Python"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#instance_of"/>
+            <Class IRI="#ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Runtime"/>
+        <Class IRI="#LanguageComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Runtime"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#LanguageComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Semantics"/>
+        <Class IRI="#LanguageComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Semantics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#LanguageComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StandardLibrary"/>
+        <Class IRI="#LanguageComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StandardLibrary"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#LanguageComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StaticTyping"/>
+        <Class IRI="#TypeSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StaticTyping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#TypeSystem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrongTyping"/>
+        <Class IRI="#TypeSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StrongTyping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#TypeSystem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Syntax"/>
+        <Class IRI="#LanguageComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Syntax"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#LanguageComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemProgramming"/>
+        <Class IRI="#ApplicationDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SystemProgramming"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ApplicationDomain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TranspiledLanguage"/>
+        <Class IRI="#ExecutionModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TranspiledLanguage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ExecutionModel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TypeSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#ProgrammingLanguage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeakTyping"/>
+        <Class IRI="#TypeSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeakTyping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#TypeSystem"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WebDevelopment"/>
+        <Class IRI="#ApplicationDomain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WebDevelopment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_a"/>
+            <Class IRI="#ApplicationDomain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#instance_of"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#is_a"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#part_of"/>
+    </TransitiveObjectProperty>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
